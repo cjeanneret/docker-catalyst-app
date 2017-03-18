@@ -3,3 +3,5 @@
 git clone ${GIT_REMOTE} /webapp
 cd /webapp
 git reset --hard ${REVISION}
+
+touch /webapp/clone-done

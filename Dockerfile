@@ -17,4 +17,4 @@ RUN chmod +x /docker-entrypoint.sh
 
 VOLUME ["/webapp"]
 
-CMD ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git clone ${GIT_REMOTE} /webapp
+cd /webapp
+git reset --hard ${REVISION}

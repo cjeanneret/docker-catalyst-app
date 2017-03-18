@@ -12,6 +12,7 @@ RUN rm -rf /var/lib/apt/lists/*
 
 COPY docker-entrypoint.d/* /docker-entrypoint.d/
 COPY docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
 
 
 VOLUME ["/webapp"]

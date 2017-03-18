@@ -14,6 +14,8 @@ COPY docker-entrypoint.d/* /docker-entrypoint.d/
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh /docker-entrypoint.d/*
 
+RUN useradd -d /webapp --uid 1024 catalyst
+USER catalyst
 
 VOLUME ["/webapp"]
 

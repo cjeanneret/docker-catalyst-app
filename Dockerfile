@@ -22,4 +22,3 @@ USER catalyst
 VOLUME ["/webapp"]
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["/bin/bash"]

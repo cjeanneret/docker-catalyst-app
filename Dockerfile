@@ -14,9 +14,12 @@ COPY docker-entrypoint.d/* /docker-entrypoint.d/
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod +x /docker-entrypoint.sh /docker-entrypoint.d/*
 
-RUN useradd -d /webapp --uid 1024 catalyst
+RUN useradd -d /catalyst -m --uid 1024 catalyst
+RUN mkdir /webapp && chown catalyst: /webapp
+ADD ssh_known_hosts /etc/ssh/
 USER catalyst
 
 VOLUME ["/webapp"]
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["/bin/bash"]
